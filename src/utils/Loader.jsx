@@ -17,7 +17,7 @@ const Loader = () => {
 
   return (
     <div className='bg-red-500 h-1 transition-all duration-200 absolute z-40 top-0' style={{width: `${currentProgress}%`}}>
-        Loader
+        
     </div>
   )
 }

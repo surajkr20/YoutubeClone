@@ -5,6 +5,7 @@ import Feed from "./components/FeedSection/Feed";
 import SearchVideoResult from "./components/SearchSection/SearchVideoResult";
 import VideoDetails from "./components/VideoSection/VideoDetails";
 import { AppContext } from "./useContextHook/useContextApi";
+import { ThemeProvider } from "./useContextHook/useTheme";
 
 const App = () => {
   return (
