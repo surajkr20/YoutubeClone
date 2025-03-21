@@ -1,4 +1,3 @@
-
 import React, {
   useContext,
   createContext,
@@ -20,11 +19,14 @@ export const AppContext = ({ children }) => {
   const fetchYoutubeData = async (params) => {
     setLoading(true);
     try {
-      const res = await fetchApiForYoutubeData("videos", params);
-      setVideoData(res.items);
-      console.log(res.items);
+      const res = await fetchApiForYoutubeData(params);
+
+      console.log("Fetched Data:", res); // Debugging
+
+      setVideoData(res?.items || []); // Prevent undefined errors
     } catch (error) {
-      console.error(error, "error fetching youtube results..");
+      console.error("Error fetching YouTube results:", error);
+      setVideoData([]); // Ensure the state doesn't break
     } finally {
       setLoading(false);
     }
@@ -41,7 +43,7 @@ export const AppContext = ({ children }) => {
       } else {
         fetchYoutubeData({
           part: "snippet, contentDetails, statistics",
-          chart: 'mostPopular',
+          chart: "mostPopular",
           regionCode: "IN",
           maxResults: 10,
           videoCategoryId: selectedCategory,
@@ -69,4 +71,4 @@ export const AppContext = ({ children }) => {
 // eslint-disable-next-line react-refresh/only-export-components
 export const useAppContext = () => {
   return useContext(Context);
-}
+};
