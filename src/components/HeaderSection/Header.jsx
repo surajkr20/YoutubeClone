@@ -39,7 +39,7 @@ const Header = () => {
     <div
       className={`sticky top-0 z-10 flex flex-row items-center justify-between h-20 shadow-lg px-4 md:px-5 ${
         isDarkMode ? "bg-gray-900" : "bg-white"
-      } text-${isDarkMode ? "white" : "bg-gray-700"}`}
+      } text-${isDarkMode ? "white" : "bg-gray-700"} overflow-x-hidden`}
     >
       {!loading && <Loader />}
       <div className="flex h-5 items-center">

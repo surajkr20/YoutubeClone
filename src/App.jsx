@@ -9,6 +9,7 @@ import { ThemeProvider } from "./useContextHook/useTheme";
 
 const App = () => {
   return (
+    <ThemeProvider>
     <AppContext>
       <BrowserRouter>
         <div className="flex flex-col w-full">
@@ -27,6 +28,7 @@ const App = () => {
         </div>
       </BrowserRouter>
     </AppContext>
+    </ThemeProvider>
   );
 };
 
