@@ -111,7 +111,7 @@ const Header = () => {
         <button
           className={`flex items-center justify-center w-[40px] rounded-r-3xl md:w-[60px] h-10 border-l-0 ${
             isDarkMode ? "border-gray-700" : "border-black"
-          } bg-${isDarkMode ? "gray-700" : "gray-300"}`}
+          } bg-${isDarkMode ? "gray-700" : "zinc-300"}`}
           onClick={handleSearchQuery}
         >
           <IoIosSearch className="text-xl" />
