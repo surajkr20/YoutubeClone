@@ -118,7 +118,7 @@ const Header = () => {
         </button>
 
         <button
-          className={`flex items-center justify-center w-[40px] rounded-r-3xl md:h-10 h-8 rounded-full md:w-[60px] hover:bg-${
+          className={`flex items-center justify-center w-10 h-10 rounded-full md:w-[60px] hover:bg-${
             isDarkMode ? "gray-700" : "gray-100"
           }`}
           // onClick={handleSearchQuery}
