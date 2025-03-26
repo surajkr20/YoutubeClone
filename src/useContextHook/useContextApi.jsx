@@ -38,7 +38,7 @@ export const AppContext = ({ children }) => {
         fetchYoutubeData({
           part: "snippet, contentDetails, statistics",
           regionCode: "IN",
-          maxResults: 10,
+          maxResults: 20,
           chart: "mostPopular",
         });
       } else {

@@ -19,7 +19,7 @@ const Sidebar = () => {
 
   return (
     <div 
-      className={`md:block overflow-y-auto h-full py-4 w-[300px] mt-2 absolute md:relative 
+      className={`md:block overflow-y-auto h-full py-4 w-[300px] absolute md:relative 
                   ${mobileMenu ? "block z-10" : "hidden"} 
                   ${isDarkMode ? "bg-gray-900 border-gray-700" : "bg-white border-gray-200"}`}
     >
