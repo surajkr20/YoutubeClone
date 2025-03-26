@@ -34,18 +34,19 @@ export const AppContext = ({ children }) => {
 
   useEffect(() => {
     if (selectedCategory) {
-      if (selectedCategory === "Home") {
+      if (selectedCategory === "0") {
         fetchYoutubeData({
           part: "snippet, contentDetails, statistics",
           regionCode: "IN",
           maxResults: 10,
+          chart: "mostPopular",
         });
       } else {
         fetchYoutubeData({
           part: "snippet, contentDetails, statistics",
           chart: "mostPopular",
           regionCode: "IN",
-          maxResults: 10,
+          maxResults: 21,
           videoCategoryId: selectedCategory,
         });
       }
@@ -67,7 +68,6 @@ export const AppContext = ({ children }) => {
     </Context.Provider>
   );
 };
-
  
 // eslint-disable-next-line react-refresh/only-export-components
 export const useAppContext = () => {

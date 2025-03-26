@@ -3,7 +3,7 @@ import { useAppContext } from '../../useContextHook/useContextApi';
 import { useTheme } from '../../useContextHook/useTheme';
 import { categories, menuItems } from "../../utils/constant";
 import MenuItems from './MenuItems';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
   const { mobileMenu, selectedCategory, setSelectedCategory } = useAppContext();
@@ -43,7 +43,7 @@ const Sidebar = () => {
         <hr className={`my-3 ${isDarkMode ? "border-gray-600" : "border-gray-300"}`} />
 
         <div className='flex items-center text-sm justify-center'>
-          Made by - <span className="font-semibold ml-1">Suraj Kumar</span>
+          Made by - <span className="font-semibold ml-1"><Link to={'https://www.linkedin.com/in/suraj-kumar-5b48b9254/'}>Suraj Kumar</Link></span>
         </div>
 
       </div>
